@@ -1,10 +1,265 @@
 extends ../../templates/default
 block vars
-	-
-		title = "Главная страница"
-		breadcrumbs = [
-			['Главная', 'index.html'],
-			[title]
-		]
+  -
+    title = "Главная страница"
 block content
-	
+  .intro
+    .case
+      .intro__wrap.row
+        .intro__content
+          .intro__label.label
+          .intro__title.h1 #[u #[i ]]
+          .intro__text.t1
+          a.intro__btn.btn.--md.--bg-blue(href="")
+        .intro__img-wrap.int-img
+          .int-img__wrap
+          .int-img__bg
+          .int-img__text-eazy
+          .int-img__text-plus.fplus
+      .intro__name
+      .intro__list.row
+        .intro__item
+          .intro__item-icon
+          .intro__item-text
+        .intro__item
+          .intro__item-icon
+          .intro__item-text
+        .intro__item
+          .intro__item-icon
+          .intro__item-text
+
+    .intro__scroll.scroll
+      .scroll__line
+      .scroll__mouse
+      .scroll__text
+
+  .help
+    .case
+      .help__wrap.row
+        .help__img-wrap
+          .help__img
+            img(src="" alt="")
+          .help__text-plus.fplus
+          .help__figure-left
+        .help__content
+          .help__desc.h6
+          .help__title.h2 #[u ]
+          .help__text.t2
+          .help__controls.row
+            a.help__btn.btn.--md.--bg-blue(href="")
+            .help__socials.socials
+              .socials__item(href="" target="_blank")
+              .socials__item(href="" target="_blank")
+                .help__figure-right
+
+  .online
+    .case
+      .online__wrap
+        .online__content
+          .online__titles
+            .online__desc.h6
+            .online__title.h2 #[u ]
+            .online__label.label.--dot  
+          .online__list.row
+            .online__item.on-item
+              .on-item__icon
+                img(src="" alt="")
+              .on-item__name
+              .on-item__text
+            .online__item.on-item
+              .on-item__icon
+                img(src="" alt="")
+              .on-item__name
+              .on-item__text
+            .online__item.on-item
+              .on-item__icon
+                img(src="" alt="")
+              .on-item__name
+              .on-item__text
+            .online__item.on-item
+              .on-item__icon
+                img(src="" alt="")
+              .on-item__name
+              .on-item__text
+        .online__imgs-wrap
+          .online__img
+            img(src="" alt="")
+          .online__rocket
+          .online__bg
+  
+  
+  .team
+    .case
+      .team__grid.row
+        .team__col
+          .team__content
+            .team__titles
+              .team__desc.h6
+              .team__title.h2 #[u ]
+
+            .team__text
+              a.team__btn.btn.--md.--bg-blue(href="")
+        .team__col
+          .team__item.employee
+            .employee__img
+              img(src="" alt="")
+            .employee__desc
+            .employee__exp
+            .employee__text
+            a.employee__btn.btn.--md.--b-blue(href="")
+        .team__col
+          .team__item.employee
+            .employee__img
+              img(src="" alt="")
+            .employee__desc
+            .employee__exp
+            .employee__text
+            a.employee__btn.btn.--md.--b-blue(href="")
+        .team__col
+          .team__item.employee
+            .employee__img
+              img(src="" alt="")
+            .employee__desc
+            .employee__exp
+            .employee__text
+            a.employee__btn.btn.--md.--b-blue(href="")
+        .team__col
+          .team__item.employee
+            .employee__img
+              img(src="" alt="")
+            .employee__desc
+            .employee__exp
+            .employee__text
+            a.employee__btn.btn.--md.--b-blue(href="")
+        .team__col
+          .team__item.employee
+            .employee__img
+              img(src="" alt="")
+            .employee__desc
+            .employee__exp
+            .employee__text
+              a.employee__btn.btn.--md.--b-blue(href="")
+      a.team__more.btn.--md.--b-blue(href="javascript:;")
+
+  .lesson
+    .case
+      .lesson__wrap.row
+        .lesson__inner
+          .lesson__content
+            .lesson__titles
+              .lesson__desc.h6
+              .lesson__title.h2 #[u ]
+            .lesson__text
+          .lesson__list
+            .lesson__item.l-step
+              .l-step__icon
+              .l-step__count
+              .l-step__name
+              .l-step__text
+            .lesson__item.l-step
+              .l-step__icon
+              .l-step__count
+              .l-step__name
+              .l-step__text
+            .lesson__item.l-step
+              .l-step__icon
+              .l-step__count
+              .l-step__name
+              .l-step__text
+        .lesson__pics
+          .lesson__pic
+            .lesson__pic-count
+            .lesson__pic-img
+                img(src="" alt="")
+          .lesson__pic
+            .lesson__pic-count
+            .lesson__pic-img
+                img(src="" alt="")
+          .lesson__pic
+            .lesson__pic-count
+            .lesson__pic-img
+                img(src="" alt="")
+
+  .workspace
+    .case
+      .workspace__titles
+        .workspace__desc.h6
+          .workspace__title.h2 #[u ]
+      .workspace__grid.row
+        .workspace__col
+          .workspace__item
+            .workspace__count
+            .workspace__text
+          .workspace__item
+            .workspace__count
+            .workspace__text
+          .workspace__item
+            .workspace__count
+            .workspace__text
+        .workspace__col
+          .workspace__item
+            .workspace__count
+            .workspace__text
+          .workspace__item
+            .workspace__count
+            .workspace__text
+          .workspace__item
+            .workspace__count
+            .workspace__text
+
+  .franch
+    .case
+      .franch__wrap.row
+        .franch__authors.authors
+          .authors__title
+          .authors__pulse
+          .authors__img
+          .authors__list
+            .authors__item
+              .authors__item
+              .authors__item
+        .franch__inner
+          .franch__quote.quote
+            .quote__icons
+              .quote__q
+              .quote__heart
+            .quote__content
+              .quote__logo
+                .quote__text
+          .franch__certs.certs
+            .certs__title
+            .certs__inner
+              .certs__list
+                .certs__item
+                  img(src="" alt="")
+                .certs__item
+                  img(src="" alt="")
+                .certs__item
+                  img(src="" alt="")
+            .certs__controls
+              .certs__nav
+              .certs__arrows
+                .certs__arrow.btn.--prev
+                .certs__arrow.btn.--next
+  .rate
+    .case
+      .rate__title.h2 #[u ]
+      .rate__desc 
+      .rate__form
+        .rate__input.input.--md.--bg-white
+          .input__wrap
+            input.input__area(type="text" name="")
+        .rate__input.input.--md.--bg-white
+          .input__wrap
+            input.input__area(type="text" name="")
+        .rate__input.input.--md.--bg-white
+          .input__wrap
+            input.input__area(type="text" name="")
+        button.rate__btn.btn.--md.--bg-blue
+          .rate__policy #[a(href="") ]
+      .rate__bg
+        img(src="" alt="")
+
+  .tariffs
+    .case
+      .tariffs__content
