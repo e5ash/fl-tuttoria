@@ -6,12 +6,54 @@
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
+  font-size: 14px;
+  font-family: "Gilroy", sans-serif;
   overflow: hidden;
   border: none;
   background-color: transparent;
   transition: 0.3s;
   outline: none;
   border-bottom: none;
+}
+.btn.--sm {
+  min-height: 54px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.btn.--md {
+  min-height: 68px;
+  padding: 0 43px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+}
+.btn.--bg-blue {
+  color: #fff;
+  background-color: #00CCCA;
+  box-shadow: 0px 10px 44px rgba(2, 203, 204, 0.3);
+}
+.btn.--bg-blue:hover {
+  background-color: #F67A49;
+  box-shadow: none;
+}
+.btn.--bg-white {
+  color: #00CCCA;
+  background-color: #fff;
+}
+.btn.--bg-white:hover {
+  color: #fff;
+  background-color: #F67A49;
+  box-shadow: none;
+}
+.btn.--b-blue {
+  color: #00CCCA;
+  background: transparent;
+  border: 2px solid #00CCCA;
+  border-radius: 5px;
+}
+.btn.--b-blue:hover {
+  color: #fff;
+  background-color: #00CCCA;
 }

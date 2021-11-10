@@ -6,8 +6,19 @@
 	&__area
 		width: 100%
 		font-family: $ffMain
-		color: #fff
-		background-color: transparent
-		&::placeholder
-			opacity: 0.5
-			color: #fff
+		color: $black
+	&.--md
+		.input
+			&__area
+				height: 70px
+				padding-left: 16px
+				padding-right: 16px
+	&.--bg-white
+		.input
+			&__area
+				border-radius: 6px
+				background-color: #fff
+				&::placeholder
+					opacity: 1
+					color: #A9A9A9
+		

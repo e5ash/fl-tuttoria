@@ -10,14 +10,13 @@ html, body {
 }
 
 body {
-  color: #fff;
-  font-size: 16px;
-  font-family: "IBM Plex Sans", sans-serif;
+  color: #112436;
+  font-size: 14px;
+  font-family: "Gilroy", sans-serif;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  font-weight: 400;
-  background-color: #1b1d1f;
+  background-color: #F5F6F8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,15 +37,11 @@ li {
 }
 
 a {
-  color: #ffb800;
+  color: #112436;
   text-decoration: none;
   outline: none;
   transition: 0.3s;
-  font-weight: 600;
   border-bottom: 1px solid transparent;
-}
-a:hover {
-  color: #ffd600;
 }
 
 input, textarea, button {

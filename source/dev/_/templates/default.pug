@@ -15,8 +15,9 @@ html(lang="ru")
 		title=title
 	body
 		.wrap
+			link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
 			link(rel="stylesheet" href="_/sys/css/style.css" + version)
-			script(src="_/sys/js/common.js" + version)
+			
 
 			+style('header', 'blocks')
 			include ../blocks/header/header
@@ -28,10 +29,6 @@ html(lang="ru")
 			+style('footer', 'blocks')
 			include ../blocks/footer/footer
 			
-			+script('input', 'components')
-			+script('check', 'components')
-			+script('select', 'components')
-			+script('tabs', 'components')
-			+script('popup', 'components')
-			+script('slider', 'components')
-			+script('tog', 'components')
+			script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
+			script(src="https://unpkg.com/imask")
+			script(src="_/sys/js/common.js" + version)
