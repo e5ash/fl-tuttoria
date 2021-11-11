@@ -372,7 +372,7 @@ path, circle, rect, line {
 .header__nav {
   padding-top: 20px;
   margin-left: auto;
-  margin-right: 72px;
+  margin-right: 88px;
 }
 .header__nav ul {
   margin-left: -36px;
@@ -409,7 +409,7 @@ path, circle, rect, line {
   font-weight: 700;
 }
 .header__callback {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
   margin-top: 3px;
 }
@@ -458,6 +458,7 @@ path, circle, rect, line {
   font-size: 26px;
   line-height: 42px;
   font-weight: 900;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 .h1.r:before {
@@ -470,6 +471,7 @@ path, circle, rect, line {
 .h1 u {
   font-size: 36px;
   line-height: 50px;
+  letter-spacing: 1.3px;
 }
 
 .h2 {
@@ -599,7 +601,7 @@ path, circle, rect, line {
   z-index: 5;
   position: relative;
   display: flex;
-  margin-top: 190px;
+  margin-top: 192px;
   margin-left: -11px;
   margin-right: -11px;
 }
@@ -608,7 +610,7 @@ path, circle, rect, line {
   width: 100%;
   margin-left: 11px;
   margin-right: 11px;
-  padding: 25px 25px 28px;
+  padding: 32px 29px 28px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
   background-color: #fff;
   border-radius: 10px;
@@ -617,7 +619,7 @@ path, circle, rect, line {
 .intro__item-icon {
   width: 80px;
   left: 5px;
-  top: -53px;
+  top: -52px;
   position: absolute;
 }
 .intro__item-text {
@@ -652,7 +654,7 @@ path, circle, rect, line {
 }
 .int-img__text-eazy {
   position: absolute;
-  top: 40px;
+  top: 42px;
   right: 365px;
   width: 320px;
   height: 121px;
@@ -665,14 +667,14 @@ path, circle, rect, line {
 }
 .int-img__text-plus {
   position: absolute;
-  top: 0;
-  right: -140px;
+  top: -9px;
+  right: -26px;
 }
 
 .scroll {
   position: absolute;
   top: -132px;
-  left: -268px;
+  left: -252px;
   width: 195px;
 }
 .scroll__line {
@@ -689,65 +691,78 @@ path, circle, rect, line {
   border: 2px solid #B3B7C1;
 }
 .scroll__text {
-  margin-top: 90px;
+  margin-top: 95px;
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: #B3B7C1;
 }
 
 .help {
-  padding-top: 107px;
-  padding-bottom: 72px;
-}
-.help__wrap {
-  align-items: center;
+  padding-top: 152px;
+  padding-bottom: 82px;
 }
 .help__img {
   max-width: 550px;
   width: 100%;
   margin-right: auto;
+  position: relative;
+  left: 25px;
 }
 .help__img-wrap {
   position: relative;
 }
 .help__text-plus {
   position: absolute;
-  top: -80px;
-  right: -130px;
+  top: -62px;
+  right: -135px;
 }
 .help__figure-left {
   position: absolute;
   top: auto;
   bottom: -300px;
-  left: -350px;
+  left: -320px;
 }
 .help__figure-right {
   position: absolute;
-  top: -100px;
-  right: -100px;
+  top: -104px;
+  right: -88px;
 }
 .help__content {
   max-width: 600px;
   width: 100%;
+  margin-top: 24px;
   margin-left: auto;
   position: relative;
 }
 .help__desc {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .help__title {
   margin-bottom: 10px;
   position: relative;
 }
+.help__title u {
+  font-size: 41px;
+}
 .help__text {
   opacity: 0.6;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+  max-width: 520px;
+  width: 100%;
 }
 .help__controls {
   align-items: center;
 }
 .help__socials {
   margin-left: 23px;
+}
+.help__socials .socials__list {
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.help__socials .socials__item {
+  margin-left: 14px;
+  margin-right: 14px;
 }
 
 .online__content {
@@ -770,6 +785,7 @@ path, circle, rect, line {
 }
 .online__label {
   width: 140px;
+  top: -7px;
 }
 .online__list {
   align-items: flex-start;
@@ -1298,6 +1314,9 @@ path, circle, rect, line {
   position: relative;
   margin-top: -370px;
 }
+.certs__inner {
+  position: relative;
+}
 .certs__wrap {
   padding-left: 725px;
   margin-right: -1000px;
@@ -1316,6 +1335,7 @@ path, circle, rect, line {
   width: 252px;
   height: 414px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .certs__item.swiper-slide-active {
   width: 308px;
@@ -1377,6 +1397,8 @@ path, circle, rect, line {
   margin-top: -280px;
   color: #fff;
   height: 549px;
+  position: relative;
+  overflow: hidden;
 }
 .rate__title {
   margin-bottom: 8px;
@@ -1407,6 +1429,12 @@ path, circle, rect, line {
 }
 .rate__policy a:hover {
   border-color: transparent;
+}
+.rate__img {
+  position: absolute;
+  top: -180px;
+  right: -180px;
+  transform: scale(-1, 1) rotate(10deg);
 }
 .rate__bg {
   width: 1920px;
@@ -1660,8 +1688,4 @@ path, circle, rect, line {
 }
 .faq__q-text p:last-of-type {
   margin-bottom: 0;
-}
-
-.order, .footer, .modal {
-  display: none;
 }

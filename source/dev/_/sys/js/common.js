@@ -5,24 +5,25 @@ var html = document.querySelector('html'),
 var mailPattern = /^[0-9a-z_-]+@[0-9a-z_-]+.[a-z]{2,5}$/i;
 
 
-let certs = document.querySelector('.certs__inner');
-if (certs) {
-	let certsSwiper = new Swiper(certs, {
-		loop: true,
-		loopAdditionalSlides: 6,
-		slidesPerView: 'auto',
-		spaceBetween: 20,
-		navigation: {
-			nextEl: '.certs__arrow.swiper-button-next',
-			prevEl: '.certs__arrow.swiper-button-prev',
-		},
-		pagination: {
-			el: '.certs__nav.swiper-pagination',
-			type: 'bullets',
-		},
-
-	});
-}
+let certsSlider = document.querySelector('.certs__inner');
+  if (certsSlider) {
+    let introSliderSwiper = new Swiper(certsSlider, {
+    	loop: true,
+    	slidesPerView: 'auto',
+    	// slidesOffsetBefore: 700,
+      spaceBetween: 20,
+      // centeredSlides: true,
+      speed: 900,
+      pagination: {
+        el: '.certs__nav.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+      	prevEl: '.certs__arrow.btn.--prev.swiper-button-prev',
+        nextEl: '.certs__arrow.btn.--next.swiper-button-next',
+      },
+    });
+  }
 
 let inputs = document.querySelectorAll('.input');
 if (inputs) {

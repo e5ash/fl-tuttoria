@@ -1,0 +1,21 @@
+.input__wrap {
+  position: relative;
+}
+.input__area {
+  width: 100%;
+  font-family: "Gilroy", sans-serif;
+  color: #112436;
+}
+.input.--md .input__area {
+  height: 70px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.input.--bg-white .input__area {
+  border-radius: 6px;
+  background-color: #fff;
+}
+.input.--bg-white .input__area::placeholder {
+  opacity: 1;
+  color: #A9A9A9;
+}
