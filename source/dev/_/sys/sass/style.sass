@@ -1315,7 +1315,8 @@
 
 .footer
 	border-top: 1px solid #DADADA
-	margin-top: -2px
+	// margin-top: -2px
+	margin-top: auto
 	background: #F5F6F8
 	padding-top: 43px
 	padding-bottom: 20px
@@ -1549,6 +1550,19 @@
 		line-height: 23px
 		letter-spacing: 0.02em
 		margin-bottom: 20px
+
+.page
+	&__wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	&__icon
+		width: 150px
+		height: 150px
+	&__text
+		font-size: 28px
+		line-height: 38px
 
 // MODALS
 .xmodal-show

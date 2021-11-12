@@ -1980,7 +1980,7 @@ path, circle, rect, line {
 
 .footer {
   border-top: 1px solid #DADADA;
-  margin-top: -2px;
+  margin-top: auto;
   background: #F5F6F8;
   padding-top: 43px;
   padding-bottom: 20px;
@@ -2255,6 +2255,21 @@ path, circle, rect, line {
   line-height: 23px;
   letter-spacing: 0.02em;
   margin-bottom: 20px;
+}
+
+.page__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page__icon {
+  width: 150px;
+  height: 150px;
+}
+.page__text {
+  font-size: 28px;
+  line-height: 38px;
 }
 
 .xmodal-show {
