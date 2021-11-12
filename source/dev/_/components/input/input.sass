@@ -5,8 +5,17 @@
 		position: relative
 	&__area
 		width: 100%
+		font-size: $fzMain
 		font-family: $ffMain
 		color: $black
+		transition: .3s
+		cursor: pointer
+	&.--sm
+		.input
+			&__area
+				height: 50px
+				padding-left: 16px
+				padding-right: 16px
 	&.--md
 		.input
 			&__area
@@ -21,4 +30,15 @@
 				&::placeholder
 					opacity: 1
 					color: #A9A9A9
-		
+	&.--b-gray
+		.input
+			&__area
+				font-size: 15px
+				letter-spacing: 0.02em
+				border-radius: 6px
+				border: 1px solid #D0D0D0
+				&::placeholder
+					opacity: 1
+					color: #A9A9A9
+				&:focus
+					border-color: $blue

@@ -4,8 +4,8 @@
 @import grid
 
 @import ../../components/btn/btn
-// @import ../../components/check/check
-// @import ../../components/checkbox/checkbox
+@import ../../components/check/check
+@import ../../components/checkbox/checkbox
 // @import ../../components/radio/radio
 @import ../../components/input/input
 // @import ../../components/textarea/textarea
@@ -1171,3 +1171,359 @@
 				margin-bottom: 20px
 				&:last-of-type
 					margin-bottom: 0
+
+
+
+.order
+	z-index: 1
+	position: relative
+	padding-top: 45px
+	padding-bottom: 50px
+	// &__desc
+	&__title
+		font-size: 30px
+		line-height: 57px
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 13.5px
+		u
+			display: inline-block
+			font-size: 50px
+			line-height: 95px
+			font-weight: 900
+			letter-spacing: 0.04em
+		i
+			color: $blue
+			font-weight: 900
+		&:before
+			top: 9px
+			left: -28px
+	&__inner
+		align-items: center
+	&__you
+		font-size: 30px
+		line-height: 57px
+		font-weight: 700
+		width: 108px
+		text-transform: uppercase
+	&__list
+		width: calc(100% - 108px)
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__item
+		display: flex
+		align-items: center
+		padding-right: 20px
+		&:last-of-type
+			padding-right: 0
+		&-count
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 46px
+			height: 46px
+			border-radius: 50%
+			color: #fff
+			font-size: 20px
+			font-weight: 700
+			background-color: $blue
+		&-text
+			width: calc(100% - 46px)
+			padding-left: 15px
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: 0.02em
+
+
+	&__wrap
+		margin-top: 67.5px
+		padding: 40px
+		width: 100%
+		max-width: 846px
+		margin-left: auto
+		margin-right: auto
+		background-color: #fff
+		border-radius: 8px
+		box-shadow: 0px 120px 120px rgba(22, 34, 51, 0.08), 0px 64px 64px rgba(22, 34, 51, 0.12), 0px 32px 32px rgba(22, 34, 51, 0.04), 0px 24px 24px rgba(22, 34, 51, 0.04), 0px 4px 24px rgba(22, 34, 51, 0.04), 0px 4px 4px rgba(22, 34, 51, 0.04)
+	&__bg
+		z-index: -1
+		position: absolute
+		bottom: 0
+		left: 50%
+		width: 1364px
+		height: 596px
+		transform: translateX(-50%)
+
+
+.oform
+	display: flex
+	flex-wrap: wrap
+	&__content
+		width: 100%
+		max-width: 380px
+	&__title
+		font-size: 25px
+		line-height: 32px
+		letter-spacing: 0.02em
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 10px
+	&__text
+		font-size: 18px
+		line-height: 23px
+		letter-spacing: 0.02em
+	&__inner
+		margin-left: auto
+		width: 100%
+		max-width: 316px
+	&__input
+		margin-bottom: 11px
+	&__btn
+		margin-top: 20px
+		width: 100%
+		&.btn
+			padding-left: 10px
+			padding-right: 10px
+	&__policy
+		margin-top: 20px
+
+
+.footer
+	border-top: 1px solid #DADADA
+	margin-top: -2px
+	background: #F5F6F8
+	padding-top: 43px
+	padding-bottom: 20px
+	&__company
+		width: 300px
+	&__logo
+		margin-bottom: 10.5px
+	&__desc
+		font-size: 12px
+		line-height: 15.6px
+		letter-spacing: 0.02em
+		color: #808080
+	&__socials
+		margin-top: 25px
+
+	&__navs
+		width: 440px
+		display: flex
+		flex-wrap: wrap
+		padding-top: 22px
+		justify-content: space-between
+		margin-left: auto
+		margin-right: auto
+	&__nav
+		ul
+			flex-direction: column
+			margin-left: -10px
+			margin-right: -10px
+		li
+			font-size: 16px
+			line-height: 19.3px
+			letter-spacing: 0.02em
+			font-weight: 700
+			text-transform: uppercase
+			margin-left: 10px
+			margin-right: 10px
+			margin-bottom: 40px
+			&:last-of-type
+				margin-bottom: 0
+		a
+			&:hover
+				color: $blue
+
+	&__contacts
+		width: 100%
+		max-width: 270px
+		text-align: right
+
+	&__phone
+		margin-bottom: 15px
+		&-value
+			font-size: 28px
+			line-height: 34px
+			font-weight: 700
+			letter-spacing: 0.02em
+	&__email
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		margin-bottom: 10px
+		&-icon
+			min-width: 32px
+		&-value
+			padding-left: 12px
+			white-space: nowrap
+			font-size: 29px
+			line-height: 31px
+			letter-spacing: 0.01em
+	&__info
+		line-height: 21px
+		letter-spacing: 0.02em
+		color: #808080
+
+	&__bot
+		margin-top: 48px
+		margin-left: -10px
+		margin-right: -10px
+		font-size: 12px
+		line-height: 18px
+		color: rgba(0,0,0,0.68)
+		a
+			color: rgba(0,0,0,0.68)
+			border-color: rgba(0,0,0,0.3)
+			&:hover
+				border-color: transparent
+		p
+			margin-bottom: 13px
+			&:last-of-type
+				margin-bottom: 0
+	&__bl, &__bm, &__br
+		width: 33.333%
+		padding-left: 10px
+		padding-right: 10px
+	&__bm
+		text-align: center
+	&__br
+		text-align: right
+
+
+
+.pform
+	z-index: 1
+	width: 100%
+	max-width: 695px
+	position: relative
+	background: #F5F6F8
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05)
+	&__close
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		width: 30px
+		height: 30px
+		background-color: #fff
+		position: absolute
+		top: 0
+		right: 0
+		cursor: pointer
+		&:before, &:after
+			content: ''
+			width: 16px
+			height: 2px
+			background-color: $blue
+			transition: .3s
+			border-radius: 10px
+			transition: .3s
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+			margin-top: -2px
+		&:hover
+			&:before, &:after
+				background-color: $orange
+	&__wrap
+		padding: 70px 50px 55px 50px
+
+	&__title
+		font-size: 25px
+		line-height: 32px
+		font-weight: 700
+		letter-spacing: 0.02em
+		text-transform: uppercase
+		max-width: 300px
+		margin-bottom: 10px
+	&__text
+		font-size: 18px
+		line-height: 23px
+		letter-spacing: 0.02em
+		margin-bottom: 25px
+		max-width: 370px
+	&__input, &__policy
+		width: 100%
+		max-width: 310px
+	&__input
+		margin-bottom: 10px
+	&__policy
+		margin-top: 25px
+	&__btn
+		margin-top: 48px
+		width: 100%
+		max-width: 415px
+		&.btn
+			font-size: 18px
+			text-transform: uppercase
+	&__bg
+		z-index: -1
+		position: absolute
+		bottom: 0
+		right: 0
+
+.thanks
+	z-index: 1
+	width: 100%
+	max-width: 695px
+	position: relative
+	background: #F5F6F8
+	padding: 57px 100px 72px
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05)
+	&__close
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		width: 30px
+		height: 30px
+		background-color: $blue
+		position: absolute
+		top: 0
+		right: 0
+		cursor: pointer
+		border-radius: 0 0 0 6px
+		&:before, &:after
+			content: ''
+			width: 16px
+			height: 2px
+			background-color: #fff
+			transition: .3s
+			border-radius: 10px
+			transition: .3s
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+			margin-top: -2px
+		&:hover
+			background-color: $orange
+	&__wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		background-color: $blue
+		box-shadow: inset -10px -10px 20px #0AB3B1
+		margin-bottom: 15px
+	&__title
+		font-size: 25px
+		line-height: 32px
+		font-weight: 700
+		letter-spacing: 0.02em
+		margin-bottom: 12px
+		text-transform: uppercase
+	&__text
+		font-size: 18px
+		line-height: 23px
+		letter-spacing: 0.02em
+		margin-bottom: 20px

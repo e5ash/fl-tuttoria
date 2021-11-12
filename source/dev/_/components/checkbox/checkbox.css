@@ -2,3 +2,40 @@
   display: inline-flex;
   flex-wrap: wrap;
 }
+.checkbox__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #D0D0D0;
+  transition: 0.3s;
+}
+.checkbox__box svg {
+  transition: 0.3s;
+  transform: scale(0);
+}
+.checkbox__wrap {
+  width: calc(100% - 20px);
+  padding-left: 11px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #5F5F5F;
+  letter-spacing: 0.02em;
+}
+.checkbox__wrap a {
+  color: #5F5F5F;
+  border-color: #5F5F5F;
+}
+.checkbox__wrap a:hover {
+  border-color: transparent;
+}
+.checkbox.--checked .checkbox__box {
+  border-color: #00CCCA;
+  background-color: #00CCCA;
+}
+.checkbox.--checked .checkbox__box svg {
+  transform: scale(1);
+}

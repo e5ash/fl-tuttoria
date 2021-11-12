@@ -3,3 +3,36 @@
 .checkbox
 	display: inline-flex
 	flex-wrap: wrap
+	&__box
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 20px
+		height: 20px
+		border-radius: 3px
+		background-color: #fff
+		border: 1px solid #D0D0D0
+		transition: .3s
+		svg
+			transition: .3s
+			transform: scale(0)
+	&__wrap
+		width: calc(100% - 20px)
+		padding-left: 11px
+		font-size: 12px
+		line-height: 15px
+		color: #5F5F5F
+		letter-spacing: 0.02em
+		a
+			color: #5F5F5F
+			border-color: #5F5F5F
+			&:hover
+				border-color: transparent
+	&.--checked
+		.checkbox
+			&__box
+				border-color: $blue
+				background-color: $blue
+				svg
+					transform: scale(1)
+		
