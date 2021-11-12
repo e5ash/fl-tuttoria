@@ -2586,3 +2586,76 @@ path, circle, rect, line {
     display: none;
   }
 }
+@media screen and (max-width: 991px) {
+  .header__logo {
+    width: 180px;
+  }
+  .header__nav {
+    width: calc( 100% - 180px );
+    padding-top: 13px;
+    margin: 0;
+  }
+  .header__nav ul {
+    justify-content: flex-end;
+  }
+  .header__contacts {
+    padding-top: 0;
+    margin-left: auto;
+    margin-top: -20px;
+  }
+  .header__socials {
+    margin-right: 32px;
+  }
+  .header__callback {
+    font-size: 17px;
+  }
+
+  .logo {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .intro__content {
+    padding-top: 75px;
+    max-width: 580px;
+  }
+  .intro__label {
+    margin-bottom: 32px;
+  }
+  .intro__title {
+    margin-bottom: 12px;
+  }
+  .intro__text {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 420px;
+  }
+  .intro__text br {
+    display: none;
+  }
+  .intro__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -19px;
+    margin-right: -19px;
+    margin-bottom: -54px;
+  }
+  .intro__name {
+    display: none;
+  }
+  .intro__item {
+    width: calc( 100% / 2 - 38px );
+    margin-left: 19px;
+    margin-right: 19px;
+    margin-bottom: 54px;
+  }
+  .intro__item:last-of-type {
+    width: 490px;
+  }
+
+  .int-img__img {
+    width: 511px;
+    top: 60px;
+    right: -70px;
+  }
+}

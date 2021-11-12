@@ -1838,3 +1838,62 @@
 				display: none
 
 	// .footer
+
+@media screen and (max-width: 991px)
+	.header
+		&__logo
+			width: 180px
+		&__nav
+			width: calc( 100% - 180px )
+			padding-top: 13px
+			margin: 0
+			ul
+				justify-content: flex-end
+		&__contacts
+			padding-top: 0
+			margin-left: auto
+			margin-top: -20px
+		&__socials
+			margin-right: 32px
+		&__callback
+			font-size: 17px
+
+	.logo
+		font-size: 30px
+		line-height: 38px
+
+	.intro
+		&__content
+			padding-top: 75px
+			max-width: 580px
+		&__label
+			margin-bottom: 32px
+		&__title
+			margin-bottom: 12px
+		&__text
+			font-size: 20px
+			line-height: 28px
+			max-width: 420px
+			br
+				display: none
+		&__list
+			flex-wrap: wrap
+			justify-content: center
+			margin-left: -19px
+			margin-right: -19px
+			margin-bottom: -54px
+		&__name
+			display: none
+		&__item
+			width: calc( 100% / 2 - 38px )
+			margin-left: 19px
+			margin-right: 19px
+			margin-bottom: 54px
+			&:last-of-type
+				width: 490px
+
+	.int-img
+		&__img
+			width: 511px
+			top: 60px
+			right: -70px
