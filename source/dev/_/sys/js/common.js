@@ -256,8 +256,10 @@ var mailPattern = /^[0-9a-z_-]+@[0-9a-z_-]+.[a-z]{2,5}$/i;
 let certsSlider = document.querySelector('.certs__inner');
 if (certsSlider) {
 	let introSliderSwiper = new Swiper(certsSlider, {
-		loop: true,
+		// loop: true,
 		slidesPerView: 'auto',
+		centeredSlides: true,
+		// slidesOffsetBefore: 250,
 		spaceBetween: 20,
 		speed: 900,
 		pagination: {
@@ -268,6 +270,25 @@ if (certsSlider) {
 			prevEl: '.certs__arrow.btn.--prev.swiper-button-prev',
 			nextEl: '.certs__arrow.btn.--next.swiper-button-next',
 		},
+	});
+	introSliderSwiper.on('slideNextTransitionStart', (e)=>{
+		let active = e.activeIndex;
+		let elPrev = e.el.querySelectorAll('.certs__item')[active - 1];
+		let elNext = e.el.querySelectorAll('.certs__item')[active + 1];
+		if (elPrev) {
+			elPrev.classList.add('--hidden');
+		}
+		if (elNext) {
+			elNext.classList.remove('--hidden');
+		}
+	});
+	introSliderSwiper.on('slidePrevTransitionStart', (e)=>{
+		let active = e.activeIndex;
+		let elPrev = e.el.querySelectorAll('.certs__item')[active];
+
+		if (elPrev) {
+			elPrev.classList.remove('--hidden');
+		}
 	});
 }
 

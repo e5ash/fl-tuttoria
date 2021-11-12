@@ -103,14 +103,31 @@
 .r
 	z-index: 1
 	position: relative
-	&:before
+	&:before, &:after
+		opacity: 0.5
 		z-index: -1
 		position: absolute
 		content: ''
 		width: 42px
 		height: 42px
 		border-radius: 50%
-		background-color: #C0FAF1
+		background-color: #44E5C9
+		transform: scale(0)
+	&:before
+		animation: rbuble 4s linear 0s infinite
+	&:after
+		animation: rbuble 4s linear 2s infinite
+
+	&:after
+
+@keyframes rbuble
+	0%
+		transform: scale(0)
+	50%
+		transform: scale(1)
+	100%
+		transform: scale(0)		
+
 
 .h1
 	font-size: 26px
@@ -119,7 +136,7 @@
 	letter-spacing: 0.5px
 	text-transform: uppercase
 	&.r
-		&:before
+		&:before, &:after
 			top: -13px
 			left: -20px
 	i
@@ -137,7 +154,7 @@
 	letter-spacing: 0.6px
 	text-transform: uppercase
 	&.r
-		&:before
+		&:before,  &:after
 			top: -13px
 			left: -20px
 	u
@@ -317,15 +334,118 @@
 		margin-left: 10px
 		margin-bottom: 40px
 	&__mouse
-		width: 23px
+		display: flex
+		justify-content: center
+		width: 24px
 		height: 42px
 		border-radius: 30px
+		padding-top: 4px
+		margin-bottom: 14px
 		border: 2px solid #B3B7C1
+		div
+			width: 2px
+			height: 0
+			transition: .3s
+			background-color: #B3B7C1
+			border-radius: 50%
+			animation: mouseRoll 3s linear infinite
+	&__arrows
+		margin-left: -2px
+		div
+			opacity: 0
+			display: flex
+			align-items: center
+			margin-bottom: 14px
+			transition: .3s
+			&:last-of-type
+				margin-bottom: 0
+			&:before, &:after
+				content: ''
+				width: 16px
+				height: 2px
+				background-color: #B3B7C1
+			&:before
+				transform: rotate(45deg)
+				margin-right: -5px
+			&:after
+				transform: rotate(-45deg)
+			&:nth-of-type(1)
+				animation: arrowOpacity1 3s linear infinite
+			&:nth-of-type(2)
+				animation: arrowOpacity2 3s linear infinite
+			&:nth-of-type(3)
+				animation: arrowOpacity3 3s linear infinite
+		
 	&__text
-		margin-top: 95px
+		margin-top: 55px
 		line-height: 1.4
 		letter-spacing: 0.02em
 		color: #B3B7C1
+
+
+
+@keyframes mouseRoll
+	0%
+		height: 0
+	10%
+		height: 6px
+	60%
+		height: 6px
+	70%
+		height: 0
+		transform: translateY(20px)
+	100%
+		height: 0
+
+
+@keyframes arrowOpacity1
+	0%
+		opacity: 0
+	10%
+		opacity: 1
+	20%
+		opacity: 1
+	30%
+		opacity: 0
+	60%
+		opacity: 0
+	70%
+		opacity: 0
+	100%
+		opacity: 0
+
+@keyframes arrowOpacity2
+	0%
+		opacity: 0
+	20%
+		opacity: 0
+	30%
+		opacity: 1
+	40%
+		opacity: 1
+	50%
+		opacity: 0
+	60%
+		opacity: 0
+	70%
+		opacity: 0
+	100%
+		opacity: 0
+
+@keyframes arrowOpacity3
+	0%
+		opacity: 0
+	40%
+		opacity: 0
+	50%
+		opacity: 1
+	60%
+		opacity: 1
+	70%
+		opacity: 0
+	100%
+		opacity: 0
+
 
 .help
 	padding-top: 152px
@@ -875,18 +995,21 @@
 	margin-top: -370px
 	&__inner
 		position: relative
-		// overflow: visible
+		overflow: visible
 	&__list
-		// padding-left: 165px
+		padding-left: 230px
 	&__wrap
-		padding-left: 725px
-		margin-right: -1000px
+		// padding-left: 725px
+		// margin-right: -1000px
 	&__title
 		font-size: 26px
 		line-height: 25px
 		letter-spacing: 0.01em
 		font-weight: 900
+		width: 308px
 		margin-bottom: 28px
+		margin-left: auto
+		margin-right: 230px
 	&__item
 		display: flex
 		align-items: center
@@ -897,11 +1020,14 @@
 		cursor: pointer
 		&.swiper-slide-active
 			width: 308px
+		&.--hidden
+			opacity: 0
+			visibility: hidden
 	&__controls
 		position: relative
 		margin-top: 17px
-		// margin-left: auto
-		// margin-right: 285px
+		margin-left: auto
+		margin-right: 230px
 		width: 308px
 		height: 35px
 		font-size: 0
@@ -1605,6 +1731,7 @@
 @media screen and (max-width: 1920px)
 	.scroll
 		left: -100px
+		// left: 0
 		&__text
 			position: relative
 			left: -30px
@@ -1612,7 +1739,7 @@
 
 @media screen and (max-width: 1660px)
 	.scroll
-		display: none
+		// display: none
 
 @media screen and (max-width: 1340px)
 	.header

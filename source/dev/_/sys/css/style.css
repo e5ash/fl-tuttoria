@@ -561,16 +561,34 @@ path, circle, rect, line {
   z-index: 1;
   position: relative;
 }
-.r:before {
+.r:before, .r:after {
+  opacity: 0.5;
   z-index: -1;
   position: absolute;
   content: "";
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background-color: #C0FAF1;
+  background-color: #44E5C9;
+  transform: scale(0);
 }
-
+.r:before {
+  animation: rbuble 4s linear 0s infinite;
+}
+.r:after {
+  animation: rbuble 4s linear 2s infinite;
+}
+@keyframes rbuble {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .h1 {
   font-size: 26px;
   line-height: 42px;
@@ -578,7 +596,7 @@ path, circle, rect, line {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-.h1.r:before {
+.h1.r:before, .h1.r:after {
   top: -13px;
   left: -20px;
 }
@@ -599,7 +617,7 @@ path, circle, rect, line {
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
-.h2.r:before {
+.h2.r:before, .h2.r:after {
   top: -13px;
   left: -20px;
 }
@@ -806,18 +824,152 @@ path, circle, rect, line {
   margin-bottom: 40px;
 }
 .scroll__mouse {
-  width: 23px;
+  display: flex;
+  justify-content: center;
+  width: 24px;
   height: 42px;
   border-radius: 30px;
+  padding-top: 4px;
+  margin-bottom: 14px;
   border: 2px solid #B3B7C1;
 }
+.scroll__mouse div {
+  width: 2px;
+  height: 0;
+  transition: 0.3s;
+  background-color: #B3B7C1;
+  border-radius: 50%;
+  animation: mouseRoll 3s linear infinite;
+}
+.scroll__arrows {
+  margin-left: -2px;
+}
+.scroll__arrows div {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  transition: 0.3s;
+}
+.scroll__arrows div:last-of-type {
+  margin-bottom: 0;
+}
+.scroll__arrows div:before, .scroll__arrows div:after {
+  content: "";
+  width: 16px;
+  height: 2px;
+  background-color: #B3B7C1;
+}
+.scroll__arrows div:before {
+  transform: rotate(45deg);
+  margin-right: -5px;
+}
+.scroll__arrows div:after {
+  transform: rotate(-45deg);
+}
+.scroll__arrows div:nth-of-type(1) {
+  animation: arrowOpacity1 3s linear infinite;
+}
+.scroll__arrows div:nth-of-type(2) {
+  animation: arrowOpacity2 3s linear infinite;
+}
+.scroll__arrows div:nth-of-type(3) {
+  animation: arrowOpacity3 3s linear infinite;
+}
 .scroll__text {
-  margin-top: 95px;
+  margin-top: 55px;
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: #B3B7C1;
 }
 
+@keyframes mouseRoll {
+  0% {
+    height: 0;
+  }
+  10% {
+    height: 6px;
+  }
+  60% {
+    height: 6px;
+  }
+  70% {
+    height: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes arrowOpacity1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes arrowOpacity2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes arrowOpacity3 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .help {
   padding-top: 152px;
   padding-bottom: 78px;
@@ -1471,17 +1623,20 @@ path, circle, rect, line {
 }
 .certs__inner {
   position: relative;
+  overflow: visible;
 }
-.certs__wrap {
-  padding-left: 725px;
-  margin-right: -1000px;
+.certs__list {
+  padding-left: 230px;
 }
 .certs__title {
   font-size: 26px;
   line-height: 25px;
   letter-spacing: 0.01em;
   font-weight: 900;
+  width: 308px;
   margin-bottom: 28px;
+  margin-left: auto;
+  margin-right: 230px;
 }
 .certs__item {
   display: flex;
@@ -1495,9 +1650,15 @@ path, circle, rect, line {
 .certs__item.swiper-slide-active {
   width: 308px;
 }
+.certs__item.--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 .certs__controls {
   position: relative;
   margin-top: 17px;
+  margin-left: auto;
+  margin-right: 230px;
   width: 308px;
   height: 35px;
   font-size: 0;
@@ -2324,11 +2485,6 @@ path, circle, rect, line {
     position: relative;
     left: -30px;
     max-width: 120px;
-  }
-}
-@media screen and (max-width: 1660px) {
-  .scroll {
-    display: none;
   }
 }
 @media screen and (max-width: 1340px) {
