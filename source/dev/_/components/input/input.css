@@ -7,7 +7,6 @@
   font-family: "Gilroy", sans-serif;
   color: #112436;
   transition: 0.3s;
-  cursor: pointer;
 }
 .input.--sm .input__area {
   height: 50px;

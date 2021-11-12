@@ -118,8 +118,6 @@
 	&:after
 		animation: rbuble 4s linear 2s infinite
 
-	&:after
-
 @keyframes rbuble
 	0%
 		transform: scale(0)
@@ -659,18 +657,19 @@
 	&__img
 		width: 258px
 		background: #EBEEF4
+		min-height: 414px
 		img
 			width: 100%
 			height: 100%
 			object-fit: cover
 	&__inner
 		width: calc(100% - 258px)
-		padding: 35px 38px 15px 26px
+		padding: 35px 35px 15px 26px
 	&__name
 		font-size: 26px
 		line-height: 24px
 		font-weight: 700
-		letter-spacing: 2px
+		letter-spacing: 0.01em
 		margin-bottom: 14px
 	&__desc
 		letter-spacing: 0.9px
@@ -773,6 +772,8 @@
 		line-height: 24px
 		font-weight: 700
 		margin-bottom: 15px
+		letter-spacing: 0.01em
+		font-family: 'Futura PT'
 	&__text
 		font-size: 17px
 		line-height: 24px
@@ -910,6 +911,7 @@
 		position: absolute
 		left: 405px
 		top: 0
+		font-family: 'Futura PT'
 		span
 			display: inline-block
 			transform: skew(21deg)
@@ -920,14 +922,15 @@
 		z-index: 11
 		position: absolute
 		background-color: #fff
-		font-size: 19px
+		font-size: 22px
 		line-height: 31px
 		padding: 21px 36px 17px 39px
 		white-space: nowrap
 		border: 1px solid #EBEBEB
 		border-radius: 8px
 		transform: skew(-8deg)
-		font-weight: 700
+		font-weight: 500
+		font-family: 'Futura PT'
 		span
 			display: inline-block
 			transform: skew(8deg)
@@ -1010,6 +1013,7 @@
 		margin-bottom: 28px
 		margin-left: auto
 		margin-right: 230px
+		font-family: 'Futura PT'
 	&__item
 		display: flex
 		align-items: center
@@ -1192,12 +1196,12 @@
 				display: inline-block
 				font-weight: 700
 		&-full
-			font-size: 31px
+			font-size: 35px
 			line-height: 37px
 			font-weight: 900
 			letter-spacing: 0.02em
 	&__name
-		font-size: 30px
+		font-size: 34px
 		line-height: 42px
 		font-weight: 900
 		letter-spacing: 0.02em
@@ -1240,6 +1244,7 @@
 		position: relative
 		margin-bottom: 50px
 		padding-left: 40px
+		font-family: 'Futura PT'
 		&:last-of-type
 			margin-bottom: 0
 		&:before
@@ -1420,10 +1425,13 @@
 		font-weight: 700
 		text-transform: uppercase
 		margin-bottom: 10px
+		font-family: 'Futura PT'
 	&__text
 		font-size: 18px
 		line-height: 23px
 		letter-spacing: 0.02em
+		font-family: 'Futura PT'
+		max-width: 360px
 	&__inner
 		margin-left: auto
 		width: 100%
@@ -1438,6 +1446,7 @@
 			padding-right: 10px
 	&__policy
 		margin-top: 20px
+		font-family: 'Futura PT'
 
 .footer
 	border-top: 1px solid #DADADA
@@ -1510,6 +1519,8 @@
 			font-size: 29px
 			line-height: 31px
 			letter-spacing: 0.01em
+			font-family: 'Futura PT'
+			font-weight: 500
 	&__info
 		line-height: 21px
 		letter-spacing: 0.02em
@@ -1522,6 +1533,7 @@
 		font-size: 12px
 		line-height: 18px
 		color: rgba(0,0,0,0.68)
+		font-family: 'Futura PT'
 		a
 			color: rgba(0,0,0,0.68)
 			border-color: rgba(0,0,0,0.3)
@@ -1586,12 +1598,14 @@
 		text-transform: uppercase
 		max-width: 300px
 		margin-bottom: 10px
+		font-family: 'Futura PT'
 	&__text
 		font-size: 18px
 		line-height: 23px
 		letter-spacing: 0.02em
 		margin-bottom: 25px
 		max-width: 370px
+		font-family: 'Futura PT'
 	&__input, &__policy
 		width: 100%
 		max-width: 310px
@@ -1599,6 +1613,7 @@
 		margin-bottom: 10px
 	&__policy
 		margin-top: 25px
+		font-family: 'Futura PT'
 	&__btn
 		margin-top: 48px
 		width: 100%
@@ -1670,11 +1685,13 @@
 		letter-spacing: 0.02em
 		margin-bottom: 12px
 		text-transform: uppercase
+		font-family: 'Futura PT'
 	&__text
 		font-size: 18px
 		line-height: 23px
 		letter-spacing: 0.02em
 		margin-bottom: 20px
+		font-family: 'Futura PT'
 
 // MODALS
 .xmodal-show
