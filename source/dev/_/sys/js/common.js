@@ -67,9 +67,10 @@ var mailPattern = /^[0-9a-z_-]+@[0-9a-z_-]+.[a-z]{2,5}$/i;
 let certsSlider = document.querySelector('.certs__inner');
 if (certsSlider) {
 	let introSliderSwiper = new Swiper(certsSlider, {
-		loop: true,
+		// loop: true,
+		centeredSlides: true,
 		slidesPerView: 'auto',
-		spaceBetween: 20,
+		// spaceBetween: 20,
 		speed: 900,
 		pagination: {
 			el: '.certs__nav.swiper-pagination',
@@ -79,6 +80,26 @@ if (certsSlider) {
 			prevEl: '.certs__arrow.btn.--prev.swiper-button-prev',
 			nextEl: '.certs__arrow.btn.--next.swiper-button-next',
 		},
+	});
+
+	introSliderSwiper.on('slideNextTransitionStart', (e)=>{
+		let active = e.activeIndex;
+		let elPrev = e.el.querySelectorAll('.certs__item')[active - 1];
+		let elNext = e.el.querySelectorAll('.certs__item')[active + 1];
+		if (elPrev) {
+			elPrev.classList.add('--hidden');
+		}
+		if (elNext) {
+			elNext.classList.remove('--hidden');
+		}
+	});
+	introSliderSwiper.on('slidePrevTransitionStart', (e)=>{
+		let active = e.activeIndex;
+		let elPrev = e.el.querySelectorAll('.certs__item')[active];
+
+		if (elPrev) {
+			elPrev.classList.remove('--hidden');
+		}
 	});
 }
 
@@ -94,6 +115,10 @@ if (inputs) {
 				mask: '+{7} (000) 000-00-00'
 			});
 		}
+
+		input.area.addEventListener('focusin', ()=>{
+			input.classList.remove('--error');
+		});
 	});
 }
 
@@ -115,3 +140,55 @@ var checks = document.querySelectorAll('.check');
 checks.forEach(check => {
 	new Check(check);
 });
+
+function errorInput(input) {
+	input.classList.add('--error');
+	return 1;
+}
+
+let validators = document.querySelectorAll('.validator');
+if (validators) {
+	validators.forEach((validator)=>{
+		let inputsRequired = validator.querySelectorAll('.input.--required');
+
+		validator.addEventListener('submit', (e)=>{
+			e.preventDefault(); // <-- remove on integration 
+			let errors = 0;
+			inputsRequired.forEach((input)=>{
+				if (input.area.value.length < 1) {
+					errors += errorInput(input);
+				}
+				if (input.classList.contains('--phone') && input.area.value.length < 18) {
+					errors += errorInput(input);
+				}
+			});
+
+			if (errors != 0) {
+				e.preventDefault();
+			} else {
+				$.fancybox.close();
+				inputsRequired.forEach((input)=>{
+					input.classList.remove('--error');
+					input.area.value = '';
+				});
+				$.fancybox.open({
+					src  : '#popup-thanks',
+					type : 'inline',
+				});
+			}
+		});
+	});
+}
+
+const smoothLinks = document.querySelectorAll('.go-to a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+	smoothLink.addEventListener('click', function (e) {
+		e.preventDefault();
+		const id = smoothLink.getAttribute('href');
+
+		document.querySelector(id).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+		});
+	});
+};

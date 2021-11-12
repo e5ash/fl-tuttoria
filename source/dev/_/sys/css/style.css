@@ -1,3 +1,4 @@
+@import "../libs/fancybox/dist/jquery.fancybox.css";
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/Gilroy-Regular.eot");
@@ -428,6 +429,7 @@ path, circle, rect, line {
   font-family: "Gilroy", sans-serif;
   color: #112436;
   transition: 0.3s;
+  border: 1px solid transparent;
 }
 .input.--sm .input__area {
   height: 50px;
@@ -460,10 +462,8 @@ path, circle, rect, line {
 .input.--b-gray .input__area:focus {
   border-color: #00CCCA;
 }
-
-.case {
-  border-right: 1px solid red;
-  border-left: 1px solid red;
+.input.--error .input__area {
+  border-color: #f00;
 }
 
 .overflow-disable {
@@ -1055,6 +1055,9 @@ path, circle, rect, line {
   margin-right: 14px;
 }
 
+.online {
+  padding-bottom: 150px;
+}
 .online__content {
   max-width: 605px;
   width: 100%;
@@ -1174,7 +1177,7 @@ path, circle, rect, line {
 .team {
   z-index: 10;
   position: relative;
-  padding-top: 198px;
+  padding-top: 50px;
 }
 .team__grid {
   align-items: center;
@@ -1647,7 +1650,7 @@ path, circle, rect, line {
   overflow: visible;
 }
 .certs__list {
-  padding-left: 230px;
+  padding-left: 268px;
 }
 .certs__title {
   font-size: 26px;
@@ -1664,7 +1667,7 @@ path, circle, rect, line {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 252px;
+  width: 308px;
   height: 414px;
   transition: 0.3s;
   cursor: pointer;
@@ -1672,9 +1675,18 @@ path, circle, rect, line {
 .certs__item.swiper-slide-active {
   width: 308px;
 }
+.certs__item.swiper-slide-active .certs__img {
+  max-width: 308px;
+  margin-left: -40px;
+}
 .certs__item.--hidden {
   opacity: 0;
   visibility: hidden;
+}
+.certs__img {
+  max-width: 265px;
+  transition: 0.3s;
+  box-shadow: 4px 4px 11px rgba(27, 35, 40, 0.23);
 }
 .certs__controls {
   position: relative;
@@ -2034,6 +2046,7 @@ path, circle, rect, line {
   position: relative;
   padding-top: 45px;
   padding-bottom: 50px;
+  margin-bottom: -2px;
 }
 .order__title {
   font-size: 30px;
@@ -2287,6 +2300,13 @@ path, circle, rect, line {
 }
 .footer__br {
   text-align: right;
+}
+
+.modal {
+  display: none;
+}
+.modal .fancybox-button {
+  display: none;
 }
 
 .pform {

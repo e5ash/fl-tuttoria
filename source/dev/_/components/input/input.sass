@@ -9,6 +9,7 @@
 		font-family: $ffMain
 		color: $black
 		transition: .3s
+		border: 1px solid transparent
 	&.--sm
 		.input
 			&__area
@@ -41,3 +42,7 @@
 					color: #A9A9A9
 				&:focus
 					border-color: $blue
+	&.--error
+		.input
+			&__area
+				border-color: #f00

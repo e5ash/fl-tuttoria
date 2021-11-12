@@ -1,3 +1,5 @@
+@import ../libs/fancybox/dist/jquery.fancybox.css
+
 @import fonts
 @import vars
 @import reset
@@ -10,9 +12,6 @@
 
 @import typography
 
-.case
-	border-right: 1px solid red
-	border-left: 1px solid red
 
 .overflow-disable
 	overflow: hidden
@@ -496,6 +495,7 @@
 				margin-right: 14px
 
 .online
+	padding-bottom: 150px
 	&__content
 		max-width: 605px
 		width: 100%
@@ -598,7 +598,7 @@
 .team
 	z-index: 10
 	position: relative
-	padding-top: 198px
+	padding-top: 50px
 	&__grid
 		align-items: center
 		margin-left: -13px
@@ -995,7 +995,7 @@
 		position: relative
 		overflow: visible
 	&__list
-		padding-left: 230px
+		padding-left: 268px
 	&__wrap
 		// padding-left: 725px
 		// margin-right: -1000px
@@ -1013,15 +1013,23 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		width: 252px
+		width: 308px
 		height: 414px
 		transition: .3s
 		cursor: pointer
+
 		&.swiper-slide-active
 			width: 308px
+			.certs__img
+				max-width: 308px
+				margin-left: -40px
 		&.--hidden
 			opacity: 0
 			visibility: hidden
+	&__img
+		max-width: 265px
+		transition: .3s
+		box-shadow: 4px 4px 11px rgba(27, 35, 40, 0.23)
 	&__controls
 		position: relative
 		margin-top: 17px
@@ -1332,6 +1340,7 @@
 	position: relative
 	padding-top: 45px
 	padding-bottom: 50px
+	margin-bottom: -2px
 	// &__desc
 	&__title
 		font-size: 30px
@@ -1547,6 +1556,12 @@
 		text-align: center
 	&__br
 		text-align: right
+
+
+.modal
+	display: none
+	.fancybox-button
+		display: none
 
 .pform
 	z-index: 1

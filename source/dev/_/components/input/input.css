@@ -7,6 +7,7 @@
   font-family: "Gilroy", sans-serif;
   color: #112436;
   transition: 0.3s;
+  border: 1px solid transparent;
 }
 .input.--sm .input__area {
   height: 50px;
@@ -38,4 +39,7 @@
 }
 .input.--b-gray .input__area:focus {
   border-color: #00CCCA;
+}
+.input.--error .input__area {
+  border-color: #f00;
 }

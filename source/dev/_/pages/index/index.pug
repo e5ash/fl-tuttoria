@@ -10,7 +10,7 @@ block content
 					.intro__label.label 1-4 классы
 					.intro__title.h1.r #[u #[i Возьмём обучение Ребёнка]] <br>под контроль и Освободим ваше время
 					.intro__text.t1 Повысим успеваемость и освободим вечер для счастливой семьи за счёт индивидуальных занятий по выполнению <br>ДЗ с профессиональными репетиторами
-					a.intro__btn.btn.--md.--bg-blue(href="#popup-order" data-popup="") Узнать Программу
+					a.intro__btn.btn.--md.--bg-blue(href="#popup-order" data-fancybox="") Узнать Программу
 				.intro__img-wrap.int-img
 					.int-img__img
 						img(src="_/uploads/intro-boy.png" alt="")
@@ -55,7 +55,7 @@ block content
 					.help__title.h2.r #[u Освободим время ]<br>для общения и приятного досуга в семье
 					.help__text.t2 #[strong Подберем удобное для вас время] занятий и решим все сложности. #[strong Больше не надо] чувствовать усталость и переживать из-за домашних заданий.
 					.help__controls.row
-						a.help__btn.btn.--md.--bg-blue(href="") Освободить время
+						a.help__btn.btn.--md.--bg-blue(href="#popup-order" data-fancybox="") Освободить время
 						.help__socials.socials
 							.socials__list
 								a.socials__item(href="" target="_blank")
@@ -103,7 +103,7 @@ block content
 						img(src="_/uploads/online-bg.svg" alt="")
 	
 	
-	.team
+	.team#team
 		.case
 			.team__grid.row
 				.team__elem
@@ -112,7 +112,7 @@ block content
 							.team__desc.h6 #[i Наши наставники]
 							.team__title.h2.r #[u Репетиторы мечты]
 						.team__text Выбирайте репетитора #[i бесплатно] до тех пор, пока не найдете своего супергероя....
-						a.team__btn.btn.--md.--bg-blue(href="") Выбрать репетитора
+						a.team__btn.btn.--md.--bg-blue(href="#popup-order" data-fancybox="") Выбрать репетитора
 				.team__elem
 					.team__item.employee
 						.employee__img
@@ -122,7 +122,7 @@ block content
 							.employee__desc Учитель начальных классов
 							.employee__exp Стаж 26 лет
 							.employee__text Многолетний опыт работы с учениками начальной школы. Отношусь к учащимся с вниманием и уважением. Развиваю положительные качества личности в учениках. Готовлю учеников к диагностикам и олимпиадам.
-							a.employee__btn.btn.--md.--b-blue(href="") Записаться
+							a.employee__btn.btn.--md.--b-blue(href="#popup-order" data-fancybox="") Записаться
 				.team__elem
 					.team__item.employee
 						.employee__img
@@ -132,7 +132,7 @@ block content
 							.employee__desc Учитель начальных классов
 							.employee__exp Стаж 9 лет
 							.employee__text Я учитель начальных классов высшей категории с опытом непрерывной работы 9 лет. Умею находить подход к каждому ребёнку, являюсь наставником и другом ученику. Использую различные методики в работе для достижения общего результата.
-							a.employee__btn.btn.--md.--b-blue(href="") Записаться
+							a.employee__btn.btn.--md.--b-blue(href="#popup-order" data-fancybox="") Записаться
 				.team__elem
 					.team__item.employee
 						.employee__img
@@ -142,7 +142,7 @@ block content
 							.employee__desc Учитель начальных классов
 							.employee__exp Стаж 28 лет
 							.employee__text Плодотворно развиваю в учениках сферу мышления, познания и творчества, мотивирую на ответственное и сознательное отношение к учёбе. Оптимизм, жизнелюбие, ориентация на успех и открытость характера позволяют находить общий язык с учениками и их родителями.
-							a.employee__btn.btn.--md.--b-blue(href="") Записаться
+							a.employee__btn.btn.--md.--b-blue(href="#popup-order" data-fancybox="") Записаться
 				.team__elem
 					.team__item.employee
 						.employee__img
@@ -152,7 +152,7 @@ block content
 							.employee__desc Учитель начальных классов
 							.employee__exp Стаж 26 лет
 							.employee__text Многолетний опыт работы с учениками начальной школы. Отношусь к учащимся с вниманием и уважением. Развиваю положительные качества личности в учениках. Готовлю учеников к диагностикам и олимпиадам.
-							a.employee__btn.btn.--md.--b-blue(href="") Записаться
+							a.employee__btn.btn.--md.--b-blue(href="#popup-order" data-fancybox="") Записаться
 				.team__elem
 					.team__item.employee
 						.employee__img
@@ -162,10 +162,10 @@ block content
 							.employee__desc Учитель начальных классов
 							.employee__exp Стаж 5 лет
 							.employee__text Считаю, что главное — это учение с увлечением. Делаю каждое занятие не только познавательным, но ещё и интересным. Стараюсь каждый урок делать максимально продуктивным, чтобы результаты радовали не только учеников, но и их родителей.
-							a.employee__btn.btn.--md.--b-blue(href="") Записаться
+							a.employee__btn.btn.--md.--b-blue(href="#popup-order" data-fancybox="") Записаться
 			a.team__more.btn.--md.--b-blue(href="javascript:;") Еще репетиторы
 
-	.lesson
+	.lesson#lesson
 		.case
 			.lesson__wrap.row
 				.lesson__inner
@@ -269,19 +269,19 @@ block content
 				.certs__inner.swiper
 					.certs__list.swiper-wrapper
 						.certs__item.swiper-slide
-							.certs__img
+							a.certs__img(href="_/uploads/cert-1.jpg" data-fancybox="certs")
 								img(src="_/uploads/cert-1.jpg" alt="")
 						.certs__item.swiper-slide
-							.certs__img
+							a.certs__img(href="_/uploads/cert-1.jpg" data-fancybox="certs")
 								img(src="_/uploads/cert-1.jpg" alt="")
 						.certs__item.swiper-slide
-							.certs__img
+							a.certs__img(href="_/uploads/cert-1.jpg" data-fancybox="certs")
 								img(src="_/uploads/cert-1.jpg" alt="")
 						.certs__item.swiper-slide
-							.certs__img
+							a.certs__img(href="_/uploads/cert-1.jpg" data-fancybox="certs")
 								img(src="_/uploads/cert-1.jpg" alt="")
 						.certs__item.swiper-slide
-							.certs__img
+							a.certs__img(href="_/uploads/cert-1.jpg" data-fancybox="certs")
 								img(src="_/uploads/cert-1.jpg" alt="")
 					.certs__controls
 						.certs__nav.swiper-pagination
@@ -294,7 +294,7 @@ block content
 		.case
 			.rate__title.h2 #[u Оценим знания ребенка и составим план обучения.]
 			.rate__desc Мы определим уровень знаний Вашего ребенка и составим индивидуальный план обучения
-			.rate__form.row
+			form.rate__form.row.validator
 				.rate__input.input.--md.--bg-white
 					.input__wrap
 						input.input__area(type="text" name="name" placeholder="Ваше имя")
@@ -311,7 +311,7 @@ block content
 		.rate__bg
 			img(src="_/uploads/rate-bg.svg" alt="")
 
-	.tariffs
+	.tariffs#tariffs
 		.case
 			.tariffs__content.row
 				.tariffs__titles
@@ -325,26 +325,26 @@ block content
 						.tariff__name 2 занятия
 						.tariff__text Начните учить английский уже сейчас с преподавателем 
 						.tariff__price-full 1900₽
-						a.tariff__btn.btn.--sm.--bg-blue(href="") Выбрать тариф
+						a.tariff__btn.btn.--sm.--bg-blue(href="#popup-order" data-fancybox="") Выбрать тариф
 					.tariffs__item.tariff
 						.tariff__price-one 900₽ #[i /занятие]
 						.tariff__name 4 занятия
 						.tariff__text Начните учить английский уже сейчас с преподавателем 
 						.tariff__price-full 3600₽
-						a.tariff__btn.btn.--sm.--bg-blue(href="") Выбрать тариф
+						a.tariff__btn.btn.--sm.--bg-blue(href="#popup-order" data-fancybox="") Выбрать тариф
 					.tariffs__item.tariff.--popular
 						.tariff__label Популярный тариф
 						.tariff__price-one 850₽ #[i /занятие]
 						.tariff__name 8 занятий
 						.tariff__text Начните учить английский уже сейчас с преподавателем 
 						.tariff__price-full 6800₽
-						a.tariff__btn.btn.--sm.--bg-white(href="") Выбрать тариф
+						a.tariff__btn.btn.--sm.--bg-white(href="#popup-order" data-fancybox="") Выбрать тариф
 					.tariffs__item.tariff
 						.tariff__price-one 800₽ #[i /занятие]
 						.tariff__name 16 занятий
 						.tariff__text Начните учить английский уже сейчас с преподавателем 
 						.tariff__price-full 12800 ₽
-						a.tariff__btn.btn.--sm.--bg-blue(href="") Выбрать тариф
+						a.tariff__btn.btn.--sm.--bg-blue(href="#popup-order" data-fancybox="") Выбрать тариф
 
 	.faq
 		.case
@@ -431,7 +431,7 @@ block content
 					.oform__content
 						.oform__title Запишитесь <br>На Бесплатный Пробный урок
 						.oform__text Методист определит ваш уровень знаний и составит индивидуальную программу обучения
-					.oform__inner
+					form.oform__inner.validator
 						.oform__input.input.--sm.--b-gray
 							.input__wrap
 								input.input__area(type="text" name="name" placeholder="Ваше имя")
