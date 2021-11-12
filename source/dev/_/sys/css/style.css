@@ -151,6 +151,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -245,6 +246,35 @@ path, circle, rect, line {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+.case .case {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (max-width: 1340px) {
+  .case {
+    width: 1150px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .case {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .case {
+    width: 730px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .case {
+    width: 560px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .case {
+    width: 100%;
+  }
 }
 
 .row {
@@ -416,8 +446,17 @@ path, circle, rect, line {
   border-color: #00CCCA;
 }
 
+.case {
+  border-right: 1px solid red;
+  border-left: 1px solid red;
+}
+
 .overflow-disable {
   overflow: hidden;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  outline: none;
 }
 
 .logo {
@@ -1032,6 +1071,11 @@ path, circle, rect, line {
   width: 258px;
   background: #EBEEF4;
 }
+.employee__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .employee__inner {
   width: calc(100% - 258px);
   padding: 35px 38px 15px 26px;
@@ -1127,6 +1171,7 @@ path, circle, rect, line {
   border: 5px solid #00CCCA;
   border-radius: 20px;
   height: 306px;
+  overflow: hidden;
 }
 .lesson__pic-img img {
   width: 100%;
@@ -2208,4 +2253,93 @@ path, circle, rect, line {
   line-height: 23px;
   letter-spacing: 0.02em;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1920px) {
+  .scroll {
+    left: -100px;
+  }
+  .scroll__text {
+    position: relative;
+    left: -30px;
+    max-width: 120px;
+  }
+}
+@media screen and (max-width: 1660px) {
+  .scroll {
+    display: none;
+  }
+}
+@media screen and (max-width: 1340px) {
+  .header__nav {
+    margin-right: 55px;
+  }
+
+  .intro__item {
+    width: calc( 100% / 3 );
+    padding: 30px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .help {
+    padding-top: 110px;
+  }
+  .help__img {
+    left: 0;
+    max-width: 450px;
+  }
+
+  .online__img {
+    width: 850px;
+    left: -70px;
+  }
+
+  .workspace__text br {
+    display: none;
+  }
+
+  .franch__authors {
+    width: 620px;
+  }
+  .franch__inner {
+    width: calc(100% - 620px);
+  }
+  .franch__quote {
+    padding-left: 0;
+  }
+
+  .authors__title {
+    z-index: 1;
+    width: 800px;
+    position: relative;
+    left: 170px;
+  }
+  .authors__pulse {
+    top: 450px;
+  }
+  .authors__item:nth-of-type(2) {
+    top: 390px;
+    left: 460px;
+  }
+
+  .tariffs__text {
+    width: calc( 100% - 520px );
+    padding-left: 20px;
+  }
+  .tariffs__item.--popular {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .faq {
+    padding-top: 100px;
+  }
+  .faq__phones {
+    margin-top: 0;
+  }
+
+  .order__item-text br {
+    display: none;
+  }
 }
