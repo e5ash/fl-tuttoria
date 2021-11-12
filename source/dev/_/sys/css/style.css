@@ -755,7 +755,9 @@ path, circle, rect, line {
   height: 377px;
   padding-top: 43px;
   padding-left: 37px;
-  background: url("../imgs/fplus-bg.svg") no-repeat center;
+  background-image: url("../imgs/fplus-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .int-img__img {
