@@ -2255,6 +2255,65 @@ path, circle, rect, line {
   margin-bottom: 20px;
 }
 
+.xmodal-show {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.xmodal {
+  z-index: 99999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  touch-action: none;
+}
+.xmodal__wrap, .xmodal__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+.xmodal__wrap {
+  z-index: 5000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 30px;
+}
+.xmodal__wrap * {
+  touch-action: none;
+}
+.xmodal__wrap.--add-touch * {
+  touch-action: auto;
+}
+.xmodal__bg {
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.xmodal.--show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 100%;
+  display: none;
+  position: relative;
+}
+
 @media screen and (max-width: 1920px) {
   .scroll {
     left: -100px;
@@ -2394,9 +2453,39 @@ path, circle, rect, line {
     right: -60px;
     margin-left: auto;
   }
+  .intro__name {
+    top: 555px;
+  }
+  .intro__list {
+    margin-top: 305px;
+  }
 
   .int-img__text-plus {
     top: -110px;
+  }
+  .int-img__text-eazy {
+    top: 190px;
+  }
+
+  .help {
+    padding-bottom: 110px;
+  }
+  .help__content {
+    margin-top: 0;
+    max-width: 450px;
+  }
+  .help__img {
+    left: -50px;
+    bottom: -50px;
+  }
+  .help__img img {
+    transform: scale(1.2);
+  }
+  .help__figure-left {
+    display: none;
+  }
+  .help__text-plus {
+    right: -86px;
   }
 
   .team__grid {
@@ -2449,5 +2538,51 @@ path, circle, rect, line {
 
   .quote__content {
     padding: 0;
+  }
+
+  .rate__title, .rate__desc {
+    z-index: 2;
+    position: relative;
+  }
+  .rate__form {
+    z-index: 2;
+    position: relative;
+    margin-bottom: -20px;
+  }
+  .rate__input, .rate__btn {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 20px;
+  }
+
+  .tariffs__item {
+    padding: 48px 20px 32px;
+  }
+
+  .faq {
+    padding-top: 130px;
+    padding-bottom: 110px;
+  }
+  .faq__content {
+    margin-bottom: 62px;
+  }
+  .faq__phones {
+    position: absolute;
+    top: -80px;
+    right: 80px;
+    width: 310px;
+  }
+  .faq__list {
+    max-width: 830px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .order__title u {
+    display: block;
+    line-height: 75px;
+  }
+
+  .oform__title br {
+    display: none;
   }
 }
