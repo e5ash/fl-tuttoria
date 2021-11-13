@@ -568,9 +568,17 @@ path, circle, rect, line {
   border-radius: 50%;
   margin-left: 7.5px;
   margin-right: 7.5px;
+  padding-top: 2px;
+  font-size: 0;
+}
+.socials__item svg {
+  position: relative;
 }
 .socials__item:hover {
   background-color: #F67A49;
+}
+.socials__item.--tg svg {
+  margin-left: -2px;
 }
 
 .r {
@@ -988,6 +996,8 @@ path, circle, rect, line {
   }
 }
 .help {
+  z-index: 1;
+  position: relative;
   padding-top: 152px;
   padding-bottom: 78px;
 }

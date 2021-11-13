@@ -101,8 +101,15 @@
 		border-radius: 50%
 		margin-left: 7.5px
 		margin-right: 7.5px
+		padding-top: 2px
+		font-size: 0
+		svg
+			position: relative
 		&:hover
 			background-color: $orange
+		&.--tg
+			svg
+				margin-left: -2px
 
 .r
 	z-index: 1
@@ -445,6 +452,8 @@
 		opacity: 0
 
 .help
+	z-index: 1
+	position: relative
 	padding-top: 152px
 	padding-bottom: 78px
 	&__img
