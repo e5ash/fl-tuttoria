@@ -57,29 +57,29 @@ class Check {
 }
 
 // DISABLE SLIDER
-	function disableSwiper(element, settings, breakpoint = 1028) {
-		function toggleSwiper(element, settings, breakpoint = 1028) {
-			let swiper = null;
+function disableSwiper(element, settings, breakpoint = 1028) {
+	function toggleSwiper(element, settings, breakpoint = 1028) {
+		let swiper = null;
 
-			if (document.body.offsetWidth >= breakpoint) {
-				if (element.swiper) {
-					swiper.destroy();
-					swiper = null;
-					element.swiper = null;
-				}
-			} else {
-				if (!element.swiper) {
-					swiper = new Swiper(element, settings);
-				}
+		if (document.body.offsetWidth >= breakpoint) {
+			if (element.swiper) {
+				swiper.destroy();
+				swiper = null;
+				element.swiper = null;
+			}
+		} else {
+			if (!element.swiper) {
+				swiper = new Swiper(element, settings);
 			}
 		}
-
-		toggleSwiper(element, settings);
-
-		window.addEventListener('resize', () => {
-			toggleSwiper(element, settings);
-		});
 	}
+
+	toggleSwiper(element, settings);
+
+	window.addEventListener('resize', () => {
+		toggleSwiper(element, settings);
+	});
+}
 
 // MAIN DOCUMENT
 var html = document.querySelector('html'),
@@ -158,6 +158,11 @@ if (tarrifs) {
 		// centeredSlides: true
 		initialSlide: 2,
 		spaceBetween: 40,
+		pagination: {
+			el: '.tariffs__pagination.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
 		breakpoints: {
 			0: {
 				slidesPerView: 1,

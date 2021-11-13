@@ -460,7 +460,7 @@ path, circle, rect, line {
   border-color: #f00;
 }
 
-html, body, .wrap {
+.wrap {
   overflow-x: hidden;
 }
 
@@ -1705,7 +1705,7 @@ html, body, .wrap {
   position: relative;
   margin-top: 17px;
   margin-left: auto;
-  margin-right: 230px;
+  margin-right: 238px;
   width: 308px;
   height: 35px;
   font-size: 0;
@@ -3606,6 +3606,9 @@ html, body, .wrap {
     object-fit: cover;
     object-position: center top;
   }
+  .employee__img.--xs-center img {
+    object-position: center;
+  }
   .employee__inner {
     width: 100%;
     text-align: center;
@@ -3723,18 +3726,19 @@ html, body, .wrap {
   .authors__title {
     position: relative;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    right: auto;
     bottom: 0;
-    width: calc(100% - 50px);
-    max-width: calc(100% - 50px);
+    width: 395px;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
     font-size: 19px;
     line-height: 28px;
     height: auto;
-    padding: 40px 20px 40px 40px;
-    transform: skew(-21deg);
+    margin-left: 80px;
+    padding: 30px 10px 30px 35px;
+    transform: translateX(-50%) skew(-21deg);
     margin-bottom: 50px;
   }
   .authors__title br {
@@ -3769,7 +3773,7 @@ html, body, .wrap {
   }
   .authors__item:nth-of-type(1) {
     left: 50%;
-    top: 570px;
+    top: 670px;
     margin-left: 0px;
     transform: translateX(-100%) skew(-8deg);
   }
@@ -3778,7 +3782,7 @@ html, body, .wrap {
   }
   .authors__item:nth-of-type(2) {
     left: 50%;
-    top: 440px;
+    top: 520px;
     margin-left: 220px;
     transform: translateX(-100%) skew(-8deg);
   }
@@ -3971,7 +3975,27 @@ html, body, .wrap {
 
   .page__wrap {
     height: auto;
-    padding-top: 140px;
+    padding-top: 170px;
+  }
+
+  .tariffs__inner {
+    padding-bottom: 10px;
+  }
+
+  .tariffs__pagination {
+    bottom: 15px !important;
+  }
+
+  .tariffs__pagination .swiper-pagination {
+    font-size: 0;
+  }
+
+  .tariffs__pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+  .tariffs__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #00CCCA;
   }
 }
 @media screen and (max-width: 475px) {
