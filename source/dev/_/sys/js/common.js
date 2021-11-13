@@ -56,12 +56,57 @@ class Check {
 
 }
 
+// DISABLE SLIDER
+	function disableSwiper(element, settings, breakpoint = 1028) {
+		function toggleSwiper(element, settings, breakpoint = 1028) {
+			let swiper = null;
+
+			if (document.body.offsetWidth >= breakpoint) {
+				if (element.swiper) {
+					swiper.destroy();
+					swiper = null;
+					element.swiper = null;
+				}
+			} else {
+				if (!element.swiper) {
+					swiper = new Swiper(element, settings);
+				}
+			}
+		}
+
+		toggleSwiper(element, settings);
+
+		window.addEventListener('resize', () => {
+			toggleSwiper(element, settings);
+		});
+	}
+
 // MAIN DOCUMENT
 var html = document.querySelector('html'),
 	body = document.querySelector('body'),
 	wrap = document.querySelector('.wrap');
 
 var mailPattern = /^[0-9a-z_-]+@[0-9a-z_-]+.[a-z]{2,5}$/i;
+
+
+// INPUT
+let inputs = document.querySelectorAll('.input');
+if (inputs) {
+	inputs.forEach((input) => {
+		input.area = input.querySelector('input');
+
+		if (input.classList.contains('--phone')) {
+			IMask(
+				input.area, {
+				mask: '+{7} (000) 000-00-00'
+			});
+		}
+
+		input.area.addEventListener('focusin', ()=>{
+			input.classList.remove('--error');
+		});
+	});
+}
 
 // CERTS SLIDER
 let certsSlider = document.querySelector('.certs__inner');
@@ -103,23 +148,27 @@ if (certsSlider) {
 	});
 }
 
-// INPUT
-let inputs = document.querySelectorAll('.input');
-if (inputs) {
-	inputs.forEach((input) => {
-		input.area = input.querySelector('input');
 
-		if (input.classList.contains('--phone')) {
-			IMask(
-				input.area, {
-				mask: '+{7} (000) 000-00-00'
-			});
+// TARIFFS
+
+let tarrifs = document.querySelector('.tariffs__inner');
+if (tarrifs) {
+	let tarrifsSettings = {
+		slidesPerView: 'auto',
+		// centeredSlides: true
+		initialSlide: 2,
+		spaceBetween: 40,
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 50,
+			},
+			768: {
+				slidesPerView: 'auto',
+			}
 		}
-
-		input.area.addEventListener('focusin', ()=>{
-			input.classList.remove('--error');
-		});
-	});
+	};
+	disableSwiper(tarrifs, tarrifsSettings, 1200);
 }
 
 // FAQ TOGGLES
@@ -192,3 +241,27 @@ for (let smoothLink of smoothLinks) {
 		});
 	});
 };
+
+
+let ham = document.querySelector('.header__ham');
+let nav = document.querySelector('.header__nav');
+let navLinks = document.querySelectorAll('.header__nav a');
+let toggleClass = '--toggle';
+
+ham.addEventListener('click', ()=>{
+	ham.classList.toggle(toggleClass);
+	nav.classList.toggle(toggleClass);
+	html.classList.toggle('overflow-disable');
+	body.classList.toggle('overflow-disable');
+	wrap.classList.toggle('overflow-disable');
+});
+
+navLinks.forEach((navLink)=>{
+	navLink.addEventListener('click', ()=>{
+		ham.classList.remove(toggleClass);
+		nav.classList.remove(toggleClass);
+		html.classList.remove('overflow-disable');
+		body.classList.remove('overflow-disable');
+		wrap.classList.remove('overflow-disable');
+	});
+});
