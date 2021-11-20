@@ -1537,18 +1537,23 @@ path, circle, rect, line {
 
 @keyframes fpulse {
   0% {
+    opacity: 0;
     box-shadow: 0px 0px 174px rgba(0, 0, 0, 0.08);
   }
   10% {
+    opacity: 1;
     box-shadow: 0px 0px 174px rgba(0, 0, 0, 0.08);
   }
   80% {
+    opacity: 1;
     box-shadow: 0px 0px 60px rgba(39, 39, 39, 0.05);
   }
   100% {
+    opacity: 0;
     background-color: transparent;
     box-shadow: 0px 0px 174px rgba(0, 0, 0, 0);
-    transform: scale(70);
+    width: 700px;
+    height: 700px;
   }
 }
 .authors {
@@ -1643,6 +1648,10 @@ path, circle, rect, line {
   height: 10px;
   border-radius: 50%;
   background-color: #fff;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 .authors__pulse div:nth-of-type(1) {
   animation: fpulse 8s infinite 0s;
@@ -1655,12 +1664,6 @@ path, circle, rect, line {
 }
 .authors__pulse div:nth-of-type(4) {
   animation: fpulse 8s infinite 6s;
-}
-.authors__pulse div:nth-of-type(5) {
-  animation: fpulse 6s infinite 4s;
-}
-.authors__pulse div:nth-of-type(6) {
-  animation: fpulse 6s infinite 5s;
 }
 
 .certs {
@@ -3774,6 +3777,7 @@ path, circle, rect, line {
     transform: translateX(-50%);
     margin-top: 100px;
     margin-left: -80px;
+    top: 300px;
   }
   .authors__pulse div {
     width: 8px;
